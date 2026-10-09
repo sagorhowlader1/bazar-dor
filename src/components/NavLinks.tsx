@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 
 interface INavLinksType {
@@ -12,7 +13,7 @@ const NavLinks = async () => {
     "https://api.abcz.workers.dev/api/bazardor/categories",
   );
   const data = await res.json();
-  console.log(data);
+  console.log(data, 'navLinks data');
   return (
     <div className="flex gap-6 my-3 font-medium">
       {data?.map((navs: INavLinksType, i: number) => (

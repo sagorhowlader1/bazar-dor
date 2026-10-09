@@ -18,7 +18,7 @@ interface IMarqueeType {
 const Marquee = async () => {
   const res = await fetch("https://api.abcz.workers.dev/api/bazardor/products");
   const data: IMarqueeType[] = await res.json();
-  console.log(data, 'marquee data');
+
   return (
     <div className="py-2 sticky top-0 z-50 bg-gray-50">
       <MarqueeText direction="right" duration={10}>

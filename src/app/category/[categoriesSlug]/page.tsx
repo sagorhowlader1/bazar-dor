@@ -1,9 +1,11 @@
 
+interface CategoriesPageProps {
+  params: Promise<{ categoriesSlug: string }>;
+}
 
-
-const CategoriesPage = async({params}) => {
+const CategoriesPage = async({params} : CategoriesPageProps) => {
     const {categoriesSlug} = await params;
-    console.log(categoriesSlug)
+    console.log(categoriesSlug, 'categeries card')
     return (
         <div>
             catfd card
