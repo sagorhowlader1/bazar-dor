@@ -1,7 +1,5 @@
 import { IProduct } from "@/app/types/products";
 import { PiGreaterThan } from "react-icons/pi";
-import PriceSummary from "./PriceSummary";
-import MarketTable from "./MarketTable";
 import Link from "next/link";
 
 interface ProductPageProps {
@@ -26,15 +24,6 @@ const ProductPage = ({ product }: ProductPageProps) => {
           <PiGreaterThan />
         </span>
         <span className="text-gray-700">{product?.nameBn}</span>
-        </div>
-      </div>
-
-      <div className=" max-w-7xl mx-auto pb-30">
-        <div className="border rounded-xl mt-4  p-3.5 sm:p-4 border-gray-200 bg-white">
-
-        <PriceSummary product={product} />
-
-        <MarketTable product={product} />
         </div>
       </div>
     </main>

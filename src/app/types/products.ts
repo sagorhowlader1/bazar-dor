@@ -21,7 +21,7 @@ export interface IMarket {
     division: string,
     min: number,
     max: number
-}[];
+}
 
 
 export interface IChange {
