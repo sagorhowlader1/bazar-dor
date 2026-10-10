@@ -2,20 +2,26 @@ import ProductUp from "./ProductUp";
 
 import ProductDown from "./ProductDown";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
+import { IChange, IMarket } from "@/app/types/products";
 
 interface IAllProductsType {
-    id: number;
-    nameBe: string;
-    categoryIcon: string;
-    unit: string;
-    today: number;
-    change: {
-        dir: string;
-        pct: number;
-    };
+    id: number,
+      slug: string,
+      nameBn: string,
+      category: string,
+      categoryNameBn: string,
+      categoryIcon: string,
+      unit: string,
+      image: string,
+      today: number,
+      yesterday: number,
+      lastWeek: number,
+      lastMonth: number,
+      change: IChange,
+      markets: IMarket[]
 }
 const AllProductUpDown = async() => {
-    const res = await fetch("https://api.abcz.workers.dev/api/bazardor/products");
+    const res = await fetch("https://openapi.programming-hero.com/api/bazardor/products");
     const data: IAllProductsType[] = await res.json();
 
     const upProducts = data.filter(

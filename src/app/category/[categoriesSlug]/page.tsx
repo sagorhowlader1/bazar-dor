@@ -35,7 +35,7 @@ const CategoriesPage = () => {
 
       try {
         const res = await fetch(
-          `https://api.abcz.workers.dev/api/bazardor/products?category=${encodeURIComponent(categoriesSlug)}`,
+          `https://openapi.programming-hero.com/api/bazardor/products?category=${encodeURIComponent(categoriesSlug)}`,
         );
         if (!res.ok) {
           throw new Error("Failed to fetch categories");

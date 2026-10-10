@@ -7,7 +7,7 @@ import AllProductUpDown from "@/components/AllProductUpDown";
 
 
 export default async function Home() {
-  const res = await fetch('https://api.abcz.workers.dev/api/bazardor/categories');
+  const res = await fetch('https://openapi.programming-hero.com/api/bazardor/categories');
   const data:IAllProductsType[] = await res.json()
   console.log(data, 'date api')
   return (

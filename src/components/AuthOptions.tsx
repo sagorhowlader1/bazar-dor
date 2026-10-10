@@ -1,19 +1,19 @@
-import { auth } from "@/lib/auth";
+
 import { authClient } from "@/lib/auth-client";
-import Link from "next/link";
+
 import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const AuthOptions = () => {
 
   const handleGoogleSignIn = async() => {
-    const data = await authClient.signIn.social({
+     await authClient.signIn.social({
       provider: "google"
     });
   };
 
 
   const handleGithubSignIn = async() => {
-    const data = await authClient.signIn.social({
+     await authClient.signIn.social({
       provider: "github"
     })
   }

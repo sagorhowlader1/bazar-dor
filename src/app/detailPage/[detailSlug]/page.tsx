@@ -9,7 +9,7 @@ interface DetailsPageProps {
 const DetailsPage = async ({ params }: DetailsPageProps) => {
   const { detailSlug } = await params;
   const res = await fetch(
-    `https://api.abcz.workers.dev/api/bazardor/products/${detailSlug}`,
+    `https://openapi.programming-hero.com/api/bazardor/products/${detailSlug}`,
   );
   const product = await res.json();
   console.log(detailSlug, "detailsulug");
