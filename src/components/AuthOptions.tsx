@@ -28,7 +28,7 @@ const AuthOptions = () => {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <button
         onClick={handleGoogleSignIn}
-          type="button"className="flex min-w-10 cursor-pointer items-center justify-center gap-2 rounded-xl border border-[#dce8el] bg-transparent px-4 py-4 text-sm font-medium text-gray-800 transition hover:bg-base-300"
+          type="button"className="flex min-w-10 cursor-pointer items-center justify-center gap-2 rounded-xl border border-gray-200 bg-transparent px-4 py-4 text-sm font-medium text-gray-800 transition hover:bg-base-300"
         >
           <FaGoogle className="shrink-0 text-base" />
           <span>Google দিয়ে চালিয়ে যান</span>
@@ -38,7 +38,7 @@ const AuthOptions = () => {
         <button
         onClick={handleGithubSignIn}
           type="button"
-          className="flex min-w-10 items-center cursor-pointer justify-center gap-2 rounded-2xl border border-b-gray-200 bg-transparent px-4 py-4 text-sm font-medium text-gray-800 transition hover:bg-gray-100"
+          className="flex min-w-10 items-center cursor-pointer justify-center gap-2 rounded-2xl border border-gray-200 bg-transparent px-4 py-4 text-sm font-medium text-gray-800 transition hover:bg-gray-100"
         >
           <FaGithub className="shrink-0 text-base" />
           <span>GitHub দিয়ে চালিয়ে যান</span>

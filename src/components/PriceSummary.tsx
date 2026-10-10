@@ -1,7 +1,7 @@
-import { IProduct } from "@/app/types/products";
+import { IAllProductsType } from "@/app/types/products";
 
 interface PriceSummaryProps {
-  product: IProduct;
+  product: IAllProductsType;
 }
 
 const PriceSummary = ({ product }: PriceSummaryProps) => {

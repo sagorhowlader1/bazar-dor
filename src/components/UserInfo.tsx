@@ -3,20 +3,16 @@
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
+import { GoTriangleDown } from "react-icons/go";
 
 const UserInfo = () => {
   const { data: session } = authClient.useSession();
   const user = session?.user;
-  console.log(user);
-
-  const handleSignOut = async() => {
-    await authClient.signOut();
-  }
   return (
     <div>
       {user ? (
-        <div className="my-1 items-center">
-          <div className="avatar">
+        <div className=" text-center flex">
+          <div className="avatar gap-3 items-center">
             <div className="ring-primary ring-offset-base-100 w-15 rounded-full ring-2 ring-offset-2">
               <Image
                 alt="Tailwind-CSS-Avatar-component"
@@ -24,11 +20,16 @@ const UserInfo = () => {
                 width={30}
                 height={20}
                 referrerPolicy="no-referrer"
-                />
+                
+              />
             </div>
+
+            <Link href={"/profile"}>
+              <h2 className="py-2 flex gap-1">
+                {user?.name} <GoTriangleDown />
+              </h2>
+            </Link>
           </div>
-          <h2 className="py-2">{user?.name}</h2>
-          <button onClick={handleSignOut} className="btn  btn-success">সাইন আউট</button>
         </div>
       ) : (
         <div>

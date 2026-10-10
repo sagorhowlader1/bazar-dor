@@ -1,10 +1,12 @@
-import { IProduct } from "@/app/types/products";
+import { IAllProductsType } from "@/app/types/products"
 import Link from "next/link";
 import { FaCaretUp } from "react-icons/fa";
 
 interface ProductHeaderProps {
-  product: IProduct;
+  product: IAllProductsType;
 }
+
+
 const ProductUp = ({ product }: ProductHeaderProps) => {
   return (
     <Link href={`/detailPage/${product.id}`}>

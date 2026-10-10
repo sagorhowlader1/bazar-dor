@@ -1,9 +1,9 @@
-import { IProduct } from "@/app/types/products";
+import { IAllProductsType } from "@/app/types/products";
 import { PiGreaterThan } from "react-icons/pi";
 import Link from "next/link";
 
 interface ProductPageProps {
-  product: IProduct;
+  product: IAllProductsType;
 }
 
 const ProductPage = ({ product }: ProductPageProps) => {

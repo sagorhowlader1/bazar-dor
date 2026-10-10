@@ -1,8 +1,8 @@
-import { IProduct } from "@/app/types/products";
+import { IAllProductsType } from "@/app/types/products";
 
 
 interface MarketTableProps {
-  product: IProduct;
+  product: IAllProductsType;
 }
 
 const MarketTable = ({ product }: MarketTableProps) => {

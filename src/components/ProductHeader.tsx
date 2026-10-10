@@ -1,8 +1,8 @@
-import { IProduct } from "@/app/types/products";
+import { IAllProductsType } from "@/app/types/products";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 
 interface ProductHeaderProps {
-  product: IProduct;
+  product: IAllProductsType;
 }
 const ProductHeader = ({ product }: ProductHeaderProps) => {
   const isUp = product?.change?.dir === "up";

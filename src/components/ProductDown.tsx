@@ -1,9 +1,9 @@
-import { IProduct } from "@/app/types/products";
+import { IAllProductsType } from "@/app/types/products";
 import Link from "next/link";
 import { FaCaretDown } from "react-icons/fa";
 
 interface ProductHeaderProps {
-  product: IProduct;
+  product: IAllProductsType;
 }
 const ProductDown = ({ product }: ProductHeaderProps) => {
   return (
