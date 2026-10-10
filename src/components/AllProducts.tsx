@@ -28,7 +28,6 @@ const AllProducts = async ({ category }: AllProductsProps) => {
   const filteredProducts = category
     ? data.filter((product) => product.categoryIcon === category)
     : data;
-  console.log(filteredProducts, "data category del");
 
   return (
     <div className="max-w-7xl mx-auto">

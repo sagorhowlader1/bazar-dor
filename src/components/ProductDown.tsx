@@ -32,8 +32,7 @@ const ProductDown = ({ product }: ProductHeaderProps) => {
                 </span>
 
                 <span
-                  className="flex items-center text-green-600
-                                text-[15px] font-semibold"
+                  className="flex items-center text-green-600 text-[15px] font-semibold"
                 >
                   <FaCaretDown />
                   {product?.change?.pct.toLocaleString("bn-BD")}%

@@ -1,6 +1,4 @@
-
 import { authClient } from "@/lib/auth-client";
-
 import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const AuthOptions = () => {
@@ -10,7 +8,6 @@ const AuthOptions = () => {
       provider: "google"
     });
   };
-
 
   const handleGithubSignIn = async() => {
      await authClient.signIn.social({

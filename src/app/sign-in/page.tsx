@@ -12,13 +12,7 @@ const SignInPage = () => {
 
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
-    // const confirmPassword = formData.get("confirmPassword") as string;
-
-    // if (password !== confirmPassword) {
-    //   console.error("Not data ");
-    //   return;
-    // }
-
+    
     const { data, error } = await authClient.signIn.email({
       email,
       password,
@@ -42,7 +36,7 @@ const SignInPage = () => {
 
     if (error) {
       console.log(error);
-      toast.error("সাইন ইন ভুল হয়েছে। আবার সাইন ইন করুন।", {
+      toast.error("সাইন ইন ভুল হয়েছে।", {
         position: "bottom-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -103,7 +97,6 @@ const SignInPage = () => {
         </Link>
       </div>
 
-      
     </div>
   );
 };

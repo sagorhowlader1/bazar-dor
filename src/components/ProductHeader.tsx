@@ -21,10 +21,10 @@ const ProductHeader = ({ product }: ProductHeaderProps) => {
             <h1 className="truncate text-base font-bold text-gray-900 sm:text-lg">
               {product?.nameBn}
             </h1>
-            <p className="truncate mt-1 text-[9px] text-gray-500 sm:text-[10px]">
-              প্রতি কেজি • {product?.categoryNameBn}
+            <p className="truncate mt-1 text-[9px] text-gray-500 sm:text-[13px]">
+              প্রতি কেজি · {product?.categoryNameBn}
             </p>
-            <p className="truncate mt-1 text-[9px] text-gray-500 sm:text-[10px]">
+            <p className="truncate mt-1 text-[9px] text-gray-500 sm:text-[13px]">
               গতকালের তুলনায় আজ দাম বেড়েছে · {product?.yesterday.toLocaleString("bn-BD")}
             </p>
           </div>

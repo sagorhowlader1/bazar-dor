@@ -45,7 +45,7 @@ const SignUpPage = () => {
 
     if (error) {
       console.log(error);
-       toast.error("সাইন আপ ভুল হয়েছে। আবার সাইন আপ করুন।", {
+       toast.error("সাইন আপ ভুল হয়েছে।", {
         position: "bottom-right",
         autoClose: 5000,
         hideProgressBar: false,

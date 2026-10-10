@@ -13,7 +13,7 @@ const NavLinks = async () => {
     "https://openapi.programming-hero.com/api/bazardor/categories",
   );
   const data = await res.json();
-  console.log(data, 'navLinks data');
+  
   return (
     <div>
       <div className="flex gap-6 my-2 font-medium">

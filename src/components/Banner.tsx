@@ -39,6 +39,7 @@ const BannerPage = () => {
             height={300}
             src={"/bazar-hero.png"}
             alt="bannerLogo"
+            className="h-auto w-auto"
           />
         </div>
       </div>
