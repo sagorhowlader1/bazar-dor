@@ -26,7 +26,7 @@ const BannerPage = () => {
             বিস্তারিত, গড়, সর্বনিম্ন- <br /> সর্বাধিক এবং দামের পরিবর্তন এক
             জায়গায়।
           </p>
-          <Link href={"./AllProducts.tsx"}>
+          <Link href={"/"}>
             <button className="btn bg-[#16A34A] text-white">
               সব পণ্য দেখুন
             </button>

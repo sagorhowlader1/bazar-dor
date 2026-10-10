@@ -3,6 +3,7 @@ import AllProducts from "@/components/AllProducts";
 import { IProduct } from "./types/products";
 
 import AllProductUpDown from "@/components/AllProductUpDown";
+import { ToastContainer } from "react-toastify";
 
 
 export default async function Home() {
@@ -14,6 +15,7 @@ export default async function Home() {
       <BannerPage />
       <AllProductUpDown  />
       <AllProducts />
+       <ToastContainer />
       {/* <ProductPage product={data[0]} /> */}
     </div>
   );

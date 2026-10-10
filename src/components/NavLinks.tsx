@@ -15,12 +15,14 @@ const NavLinks = async () => {
   const data = await res.json();
   console.log(data, 'navLinks data');
   return (
-    <div className="flex gap-6 my-3 font-medium">
+    <div>
+      <div className="flex gap-6 my-2 font-medium">
       {data?.map((navs: INavLinksType, i: number) => (
-        <Link key={i} href={`/categories/${navs?.slug}`}>
+        <Link key={i} href={`/category/${navs?.slug}`}>
           {navs?.icon} {navs?.nameBn}
         </Link>
       ))}
+    </div>
     </div>
   );
 };

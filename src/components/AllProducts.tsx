@@ -13,25 +13,37 @@ interface IAllProductsType {
   };
 }
 
+interface AllProductsProps {
+  category?: string;
+}
 
-
-const AllProducts = async () => {
+const AllProducts = async ({ category }: AllProductsProps) => {
   const res = await fetch("https://api.abcz.workers.dev/api/bazardor/products");
-  const data:IAllProductsType[] = await res.json();
-  console.log(data, "data category del");
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch products");
+  }
+  const data: IAllProductsType[] = await res.json();
+
+  const filteredProducts = category
+    ? data.filter((product) => product.categoryIcon === category)
+    : data;
+  console.log(filteredProducts, "data category del");
+
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="py-3">
-        <h2 className="text-2xl font-bold text-black py-2">সব পণ্য</h2>
-        <p className="text-[#1d271f80]">
-          মোট{data.length.toLocaleString("bn-BD")}টি পণ্য দেখানো হচ্ছে
-        </p>
-      </div>
+      <div className="mb-30">
+        <div className="py-3">
+          <h2 className="text-2xl font-bold text-black py-2">সব পণ্য</h2>
+          <p className="text-[#1d271f80]">
+            মোট{filteredProducts.length.toLocaleString("bn-BD")}টি পণ্য দেখানো
+            হচ্ছে
+          </p>
+        </div>
 
-      <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3">
-        {data.map((products) => (
-          <Link key={products.id} href={`/detailPage/${products.id}`}>
-            <div>
+        <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3">
+          {filteredProducts.map((products) => (
+            <Link key={products.id} href={`/detailPage/${products.id}`}>
               <div className="my-2 mx-2">
                 <div className="card bg-base-100 shadow-sm">
                   <div className="card-body">
@@ -56,25 +68,27 @@ const AllProducts = async () => {
 
                         {products.change.dir === "up" ? (
                           <span className="flex items-center text-red-600 text-[15px] font-semibold">
-                              <FaCaretUp />
-                              {products.change.pct.toLocaleString("bn-BD")}%
+                            <FaCaretUp />
+                            {products.change.pct.toLocaleString("bn-BD")}%
                           </span>
                         ) : products.change.dir === "down" ? (
                           <span className="flex items-center text-green-600 text-[15px] font-semibold">
-                                <FaCaretDown />
-                                {products.change.pct.toLocaleString("bn-BD")}%
+                            <FaCaretDown />
+                            {products.change.pct.toLocaleString("bn-BD")}%
                           </span>
                         ) : (
-                          <span className="text-gray-500 text[15px] font-semibold">- 0.0%</span>
+                          <span className="text-gray-500 text[15px] font-semibold">
+                            - 0.0%
+                          </span>
                         )}
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -38,7 +38,7 @@ const ProductHeader = ({ product }: ProductHeaderProps) => {
          
 
           <p className="text-[8px] text-gray-500 sm:text-[12px]">
-            টাকা / 
+            টাকা/কেজি
           </p>
 
           <p
