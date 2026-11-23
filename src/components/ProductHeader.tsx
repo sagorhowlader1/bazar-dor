@@ -8,8 +8,8 @@ const ProductHeader = ({ product }: ProductHeaderProps) => {
   const isUp = product?.change?.dir === "up";
   return (
     <div className="rounded-xl border max-w-7xl mx-auto border-gray-200 bg-white px-4 py-4 shadow-sm sm:px-5">
-      <div className="flex items-center justify-between gap-4">
-        <div className="flex min-w-0 items-center gap-4">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+        <div className="flex min-w-0 items-center gap-3 sm:gap-4">
           <div
             className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg
                     bg-gray-50 text-xl"
@@ -21,10 +21,10 @@ const ProductHeader = ({ product }: ProductHeaderProps) => {
             <h1 className="truncate text-base font-bold text-gray-900 sm:text-lg">
               {product?.nameBn}
             </h1>
-            <p className="truncate mt-1 text-[9px] text-gray-500 sm:text-[13px]">
+            <p className="mt-1 text-[9px] text-gray-500 sm:text-[13px]">
               প্রতি কেজি · {product?.categoryNameBn}
             </p>
-            <p className="truncate mt-1 text-[9px] text-gray-500 sm:text-[13px]">
+            <p className="mt-1 text-[9px] text-gray-500 sm:text-[13px]">
               গতকালের তুলনায় আজ দাম বেড়েছে · {product?.yesterday.toLocaleString("bn-BD")}
             </p>
           </div>

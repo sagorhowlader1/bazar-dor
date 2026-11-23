@@ -12,9 +12,9 @@ const DetailsPage = async ({ params }: DetailsPageProps) => {
     `https://openapi.programming-hero.com/api/bazardor/products/${detailSlug}`,
   );
   const product = await res.json();
-  console.log(detailSlug, "detailsulug");
+  
   return (
-    <div className="border rounded-xl mt-4  p-3.5 sm:p-4 border-gray-200 bg-white">
+    <div className="border rounded-xl max-w-7xl mx-4 xl:mx-auto mt-4 mb-4 p-3.5 sm:p-4 border-gray-200 bg-white">
       <ProductPage product={product} />
       <ProductHeader product={product} />
       <PriceSummary product={product} />

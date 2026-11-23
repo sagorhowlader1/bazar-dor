@@ -7,11 +7,10 @@ interface ProductPageProps {
 }
 
 const ProductPage = ({ product }: ProductPageProps) => {
-  console.log(product, 'product ')
   return (
     <main className=" ">
       <div className="max-w-7xl mx-auto px-3 py-5 sm:px-5 sm:py-7">
-        <div className="flex gap-2.5 items-center">
+        <div className="flex flex-wrap gap-x-2.5 gap-y-1 items-center text-sm sm:text-base">
 
         <Link href={"/"}>
         <span>হোম</span>

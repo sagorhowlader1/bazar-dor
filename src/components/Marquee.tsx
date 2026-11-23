@@ -30,7 +30,7 @@ const Marquee = async () => {
               <Link key={headerlins.id} href={`/products/${headerlins.id}`}>
 
 
-                <span className="ml-5 whitespace-nowrap gap-2 text-xl font-medium flex text-gray-700">
+                <span className="ml-5 whitespace-nowrap gap-2 text-sm sm:text-xl font-medium flex text-gray-700">
                   {headerlins.categoryIcon} {headerlins.nameBn} {" "}
                   {headerlins.today.toLocaleString("bn-BD")} টাকা/কেজি
                   

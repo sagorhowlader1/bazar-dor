@@ -71,21 +71,36 @@ const CategoriesPage = () => {
   });
 
   if (loading) {
-    return <div className="max-w-7xl mx-auto">Loading...</div>;
+    return (
+      <div className="max-w-7xl mx-auto flex min-h-[50vh] items-center justify-center px-4">
+        <span
+          className="loading loading-spinner loading-lg text-green-600"
+          aria-label="লোড হচ্ছে"
+        />
+      </div>
+    );
   }
 
   if (error) {
-    return <div>Not a Product...</div>;
+    return (
+      <div className="max-w-7xl mx-auto px-4 py-20 text-center">
+        Not a Product...
+      </div>
+    );
   }
 
   if (products.length === 0) {
-    return <div className="max-w-7xl mx-auto">Not a Category</div>;
+    return (
+      <div className="max-w-7xl mx-auto px-4 py-20 text-center">
+        Not a Category
+      </div>
+    );
   }
 
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto px-2 sm:px-4">
       <div className="mb-5">
-        <div className="flex justify-end px-4 mt-10 py-2 bg-base-100 rounded-md items-center gap-2">
+        <div className="flex flex-wrap justify-between sm:justify-end px-3 sm:px-4 mt-6 sm:mt-10 py-2 bg-base-100 rounded-md items-center gap-2">
           <span className="text-sm text-gray-600">সাজান</span>
 
           <select
@@ -94,8 +109,8 @@ const CategoriesPage = () => {
             className="border border-gray-300 rounded-md px-3 py-2 text-sm bg-transparent"
           >
             <option value="default">ডিফল্ট</option>
-            <option value="default">দাম:কম থেকে বেশি</option>
-            <option value="default">দাম:বেশি থেকে কম</option>
+            <option value="low">দাম:কম থেকে বেশি</option>
+            <option value="high">দাম:বেশি থেকে কম</option>
           </select>
         </div>
 
@@ -105,7 +120,7 @@ const CategoriesPage = () => {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {sortedProducts.map((products) => (
           <Link key={products.id} href={`/detailPage/${products.id}`}>
             <div>

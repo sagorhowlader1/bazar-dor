@@ -69,13 +69,13 @@ const SignUpPage = () => {
             বিনা খরচে সাইন আপ করে সব বিস্তারিত দাম দেখুন।
           </p>
         </div>
-        <form onSubmit={onSubmit}>
-          <fieldset className="fieldset bg-base-100  border border-base-300 rounded-2xl p-4">
+        <form onSubmit={onSubmit} className="w-full max-w-md px-4 sm:px-0">
+          <fieldset className="fieldset bg-base-100  border border-base-300 rounded-2xl p-4 w-full">
             <label className="label">নাম</label>
             <input
               type="text"
               name="name"
-              className="input w-md"
+              className="input w-full"
               placeholder="যেমন: রহিম উদ্দিন"
             />
 
@@ -83,7 +83,7 @@ const SignUpPage = () => {
             <input
               type="email"
               name="email"
-              className="input w-md"
+              className="input w-full"
               placeholder="you@example.com"
             />
 
@@ -91,7 +91,7 @@ const SignUpPage = () => {
             <input
               type="password"
               name="password"
-              className="input w-md"
+              className="input w-full"
               placeholder="কমপক্ষে ৮ অক্ষর"
             />
 
@@ -99,7 +99,7 @@ const SignUpPage = () => {
             <input
               type="password"
               name="confirmPassword"
-              className="input w-md "
+              className="input w-full"
               placeholder="আবার লিখুন"
             />
 

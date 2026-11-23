@@ -30,8 +30,8 @@ const AllProducts = async ({ category }: AllProductsProps) => {
     : data;
 
   return (
-    <div className="max-w-7xl mx-auto">
-      <div className="mb-30">
+    <div className="max-w-7xl mx-auto px-2 sm:px-4">
+      <div className="mb-10 sm:mb-30">
         <div className="py-3">
           <h2 className="text-2xl font-bold text-black py-2">সব পণ্য</h2>
           <p className="text-[#1d271f80]">
@@ -40,7 +40,7 @@ const AllProducts = async ({ category }: AllProductsProps) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {filteredProducts.map((products) => (
             <Link key={products.id} href={`/detailPage/${products.id}`}>
               <div className="my-2 mx-2">
