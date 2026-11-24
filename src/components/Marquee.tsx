@@ -20,7 +20,7 @@ const Marquee = async () => {
   const data: IMarqueeType[] = await res.json();
 
   return (
-    <div className="py-2 sticky top-0 z-50 bg-gray-50 border border-gray-200">
+    <div className="py-2 sticky top-0 z-50 bg-base-200 border border-base-300">
       <MarqueeText direction="right" duration={10}>
         <div className="flex">
           {data.map((headerlins) => {
@@ -30,7 +30,7 @@ const Marquee = async () => {
               <Link key={headerlins.id} href={`/products/${headerlins.id}`}>
 
 
-                <span className="ml-5 whitespace-nowrap gap-2 text-sm sm:text-xl font-medium flex text-gray-700">
+                <span className="ml-5 whitespace-nowrap gap-2 text-sm sm:text-xl font-medium flex text-base-content/70">
                   {headerlins.categoryIcon} {headerlins.nameBn} {" "}
                   {headerlins.today.toLocaleString("bn-BD")} টাকা/কেজি
                   

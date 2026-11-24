@@ -11,7 +11,7 @@ export default async function Home() {
   const data:IAllProductsType[] = await res.json()
  
   return (
-    <div className="bg-[#f4f8f5]">
+    <div className="bg-base-200">
       <BannerPage />
       <AllProductUpDown  />
       <AllProducts />

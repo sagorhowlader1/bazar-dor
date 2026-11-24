@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import UserInfo from "./UserInfo";
 import NavLinks from "./NavLinks";
+import ThemeToggle from "./ThemeToggle";
 
 const HeaderPage = async () => {
   const date = new Date().toLocaleDateString("bn-BD", {
@@ -23,14 +24,17 @@ const HeaderPage = async () => {
               />
 
               <div className="flex flex-col  justify-center items-center sm:items-start">
-                <h1 className="text-black text-lg sm:text-2xl font-bold">
+                <h1 className="text-base-content text-lg sm:text-2xl font-bold">
                   বাজার দর
                 </h1>
                 <p className="hidden sm:block">{date}</p>
               </div>
             </div>
           </Link>
-          <UserInfo />
+          <div className="flex items-center gap-1 sm:gap-2">
+            <ThemeToggle />
+            <UserInfo />
+          </div>
         </div>
 
         <NavLinks />

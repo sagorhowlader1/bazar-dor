@@ -33,8 +33,8 @@ const AllProducts = async ({ category }: AllProductsProps) => {
     <div className="max-w-7xl mx-auto px-2 sm:px-4">
       <div className="mb-10 sm:mb-30">
         <div className="py-3">
-          <h2 className="text-2xl font-bold text-black py-2">সব পণ্য</h2>
-          <p className="text-[#1d271f80]">
+          <h2 className="text-2xl font-bold text-base-content py-2">সব পণ্য</h2>
+          <p className="text-base-content/50">
             মোট{filteredProducts.length.toLocaleString("bn-BD")}টি পণ্য দেখানো
             হচ্ছে
           </p>
@@ -47,7 +47,7 @@ const AllProducts = async ({ category }: AllProductsProps) => {
                 <div className="card bg-base-100 shadow-sm">
                   <div className="card-body">
                     <div className="flex gap-2  items-center">
-                      <h2 className="bg-[#f4f8f5] rounded-xl px-2 py-2">
+                      <h2 className="bg-base-200 rounded-xl px-2 py-2">
                         {products?.categoryIcon}
                       </h2>
                       <div className=" flex flex-col text-xs">
@@ -61,7 +61,7 @@ const AllProducts = async ({ category }: AllProductsProps) => {
                       </li>
 
                       <li className="flex justify-between items-center">
-                        <span className="text-black font-bold">
+                        <span className="text-base-content font-bold">
                           {`${products?.today?.toLocaleString("bn-BD")} টাকা`}
                         </span>
 
@@ -76,7 +76,7 @@ const AllProducts = async ({ category }: AllProductsProps) => {
                             {products.change.pct.toLocaleString("bn-BD")}%
                           </span>
                         ) : (
-                          <span className="text-gray-500 text[15px] font-semibold">
+                          <span className="text-base-content/50 text[15px] font-semibold">
                             - 0.0%
                           </span>
                         )}

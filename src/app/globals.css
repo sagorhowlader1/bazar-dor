@@ -1,2 +1,15 @@
 @import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 @plugin "daisyui";
+
+/* Keep the exact current light-mode palette */
+[data-theme="light"] {
+  --color-base-200: #f4f8f5;
+  --color-base-content: #1d271f;
+}
+
+/* Toasts follow the active theme */
+html[data-theme="dark"] {
+  --toastify-color-light: #1f2937;
+  --toastify-text-color-light: #e5e7eb;
+}

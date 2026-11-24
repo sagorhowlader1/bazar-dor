@@ -62,10 +62,10 @@ const SignUpPage = () => {
     <div className="max-w-7xl mx-auto">
       <div className="flex flex-col justify-center items-center mt-6 ">
         <div className="py-5 text-center">
-          <h2 className="text-2xl font-bold text-black">
+          <h2 className="text-2xl font-bold text-base-content">
             অ্যাকাউন্ট তৈরি করুন
           </h2>
-          <p className="text-[#1d271f80] py-1">
+          <p className="text-base-content/50 py-1">
             বিনা খরচে সাইন আপ করে সব বিস্তারিত দাম দেখুন।
           </p>
         </div>
@@ -109,7 +109,7 @@ const SignUpPage = () => {
 
             <AuthOptions />
 
-            <p className="mt-6 text-center text-sm text-gray-600">
+            <p className="mt-6 text-center text-sm text-base-content/70">
               অ্যাকাউন্ট আছে?{" "}
               <Link
                 href="/sign-in"
@@ -120,7 +120,7 @@ const SignUpPage = () => {
             </p>
           </fieldset>
         </form>
-        <Link href={"/"} className="pt-5 text-[#1d271f80]">
+        <Link href={"/"} className="pt-5 text-base-content/50">
           ← হোম পেজে ফিরে যান
         </Link>
       </div>

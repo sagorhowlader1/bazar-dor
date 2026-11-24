@@ -20,9 +20,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       data-theme="light"
+      suppressHydrationWarning
       className={`${notoSerifBengali.className}  h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#f4f8f5]">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{if(localStorage.getItem("theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}`,
+          }}
+        />
+      </head>
+      <body className="min-h-full flex flex-col bg-base-200">
         <HeaderPage />
         <Marquee />
         <main className="min-h-screen">

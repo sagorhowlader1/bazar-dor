@@ -101,12 +101,12 @@ const CategoriesPage = () => {
     <div className="max-w-7xl mx-auto px-2 sm:px-4">
       <div className="mb-5">
         <div className="flex flex-wrap justify-between sm:justify-end px-3 sm:px-4 mt-6 sm:mt-10 py-2 bg-base-100 rounded-md items-center gap-2">
-          <span className="text-sm text-gray-600">সাজান</span>
+          <span className="text-sm text-base-content/70">সাজান</span>
 
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as SortType)}
-            className="border border-gray-300 rounded-md px-3 py-2 text-sm bg-transparent"
+            className="border border-base-300 rounded-md px-3 py-2 text-sm bg-transparent"
           >
             <option value="default">ডিফল্ট</option>
             <option value="low">দাম:কম থেকে বেশি</option>
@@ -115,7 +115,7 @@ const CategoriesPage = () => {
         </div>
 
         <div className="py-3 font-medium">
-          <p className="text-[#1d271f80]">
+          <p className="text-base-content/50">
             মোট {products.length.toLocaleString("bn-BD")}টি পণ্য দেখানো হচ্ছে
           </p>
         </div>
@@ -128,7 +128,7 @@ const CategoriesPage = () => {
                 <div className="card bg-base-100 shadow-sm">
                   <div className="card-body">
                     <div className="flex gap-2  items-center">
-                      <h2 className="bg-[#f4f8f5] rounded-xl px-2 py-2">
+                      <h2 className="bg-base-200 rounded-xl px-2 py-2">
                         {products?.categoryIcon}
                       </h2>
                       <div className=" flex flex-col text-xs">
@@ -142,7 +142,7 @@ const CategoriesPage = () => {
                       </li>
 
                       <li className="flex justify-between items-center">
-                        <span className="text-black font-bold">
+                        <span className="text-base-content font-bold">
                           {`${products?.today?.toLocaleString("bn-BD")} টাকা`}
                         </span>
 
@@ -157,7 +157,7 @@ const CategoriesPage = () => {
                             {products.change.pct.toLocaleString("bn-BD")}%
                           </span>
                         ) : (
-                          <span className="text-gray-500 text[15px] font-semibold">
+                          <span className="text-base-content/50 text[15px] font-semibold">
                             - 0.0%
                           </span>
                         )}

@@ -29,24 +29,24 @@ const PriceSummary = ({ product }: PriceSummaryProps) => {
   ];
   return (
     <section className="max-w-7xl mx-auto">
-      <h2 className="mb-2 text-xs font-bold text-gray-800 py-4 sm:text-sm">
+      <h2 className="mb-2 text-xs font-bold text-base-content py-4 sm:text-sm">
         দামের সারসংক্ষেপ
       </h2>
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
         {items.map((item) => (
           <div
             key={item.label}
-            className="rounded-lg border border-gray-200 bg-white px-3 py-2.5"
+            className="rounded-lg border border-base-300 bg-base-100 px-3 py-2.5"
           >
-            <p className="text-[12px] text-gray-500">{item.label}</p>
+            <p className="text-[12px] text-base-content/50">{item.label}</p>
             <p className={`mt-0.5 text-base font-bold ${item.color}`}>
               {item.value}
-              <span className="ml-1 text-xl font-normal text-gray-500">
+              <span className="ml-1 text-xl font-normal text-base-content/50">
                 {" "}
               </span>
             </p>
 
-            <p className="mt-0.5 text-[13px] text-gray-500">
+            <p className="mt-0.5 text-[13px] text-base-content/50">
               {item.description}
             </p>
           </div>

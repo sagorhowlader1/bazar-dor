@@ -35,7 +35,7 @@ const AllProductUpDown = async() => {
     return (
         <div className="max-w-7xl mx-auto px-2 sm:px-4">
             <div className="py-3">
-                <h2 className="text-2xl font-bold text-black py-2">
+                <h2 className="text-2xl font-bold text-base-content py-2">
                     <span className="text-red-500">
                             <FaCaretUp />
                     </span>
@@ -50,7 +50,7 @@ const AllProductUpDown = async() => {
             </div>
 
             <div className="py-3">
-                <h2 className="text-2xl font-bold text-black py-2">
+                <h2 className="text-2xl font-bold text-base-content py-2">
                     <span className="text-green-600">
                             <FaCaretDown />
                     </span>

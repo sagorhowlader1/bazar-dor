@@ -14,7 +14,7 @@ const ProductUp = ({ product }: ProductHeaderProps) => {
         <div className="card bg-base-100 shadow-sm">
           <div className="card-body">
             <div className="flex gap-2 items-center px-2 py-2">
-              <h2 className="bg-[#f4f8f5] rounded-xl px-2 py-2">
+              <h2 className="bg-base-200 rounded-xl px-2 py-2">
                 {product?.categoryIcon}
               </h2>
 
@@ -29,7 +29,7 @@ const ProductUp = ({ product }: ProductHeaderProps) => {
               </li>
 
               <li className="flex justify-between items-center">
-                <span className="text-black font-bold">
+                <span className="text-base-content font-bold">
                   {`${product?.today?.toLocaleString("bn-BD")} টাকা`}
                 </span>
 

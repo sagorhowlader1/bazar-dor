@@ -17,10 +17,10 @@ const BannerPage = () => {
               {date}
             </h3>
           </div>
-          <h2 className="text-black font-bold text-2xl sm:text-3xl md:text-4xl py-4">
+          <h2 className="text-base-content font-bold text-2xl sm:text-3xl md:text-4xl py-4">
             আজকের বাজারের দাম এক নজরে
           </h2>
-          <p className="text-[#1d271f80] pb-5 text-sm sm:text-base">
+          <p className="text-base-content/50 pb-5 text-sm sm:text-base">
             চাল, ডাল, তেল, সবজি, মাছ, মাংস, ডিম ও মসলার দাম — বাজারভিত্তিক
             বিস্তারিত, গড়, সর্বনিম্ন- <br className="hidden sm:inline" /> সর্বাধিক
             এবং দামের পরিবর্তন এক জায়গায়।

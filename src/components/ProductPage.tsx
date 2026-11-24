@@ -22,7 +22,7 @@ const ProductPage = ({ product }: ProductPageProps) => {
         <span>
           <PiGreaterThan />
         </span>
-        <span className="text-gray-700">{product?.nameBn}</span>
+        <span className="text-base-content/70">{product?.nameBn}</span>
         </div>
       </div>
     </main>
